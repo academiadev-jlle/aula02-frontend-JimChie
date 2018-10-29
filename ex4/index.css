@@ -1,0 +1,22 @@
+.titulo {
+    padding-bottom: 2px;
+    background-color: gray;
+    text-align: center;
+    color: white;
+}
+
+.tabela {
+    margin: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    align-content: center;
+}
+
+.formulario {
+    margin: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    align-content: center;
+}
