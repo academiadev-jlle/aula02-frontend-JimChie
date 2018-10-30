@@ -11,7 +11,7 @@
         crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="form.css">
 
     <title>Exercício 4</title>
 </head>
@@ -23,37 +23,29 @@
         </div>
     </header>
     <div class="formulario">
-        <form class="form-inline">
-            <div class="form-row">
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="inputAcao">Ação</label>
-                    <input type="text" class="form-control" id="inputAcao" placeholder="Ex: PETR4">
-                </div>
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="inputPreco">Preço(R$)</label>
-                    <input type="text" class="form-control" id="inputPreco" placeholder="Ex: 10.51">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+        <form class="form-inline form-acao">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputAcao">Ação</label>
+                <input type="text" class="form-control" id="inputAcao" placeholder="Ex: PETR4">
             </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPreco">Preço(R$)</label>
+                <input type="text" class="form-control" id="inputPreco" placeholder="Ex: 10.51">
+            </div>
+            <button type="button" id="btn-enviar" class="btn btn-primary mb-2">Enviar</button>
         </form>
     </div>
-    <div class="tabela table-responsive-md">
+    <div class="tabelaAcao table-responsive-md">
         <table class="table">
             <thead>
                 <tr>
-                    <td>#</td>
-                    <td>Ação</td>
-                    <td>R$</td>
-                    <td>Status</td>
+                    <!-- <td>#</td> -->
+                    <th class="tagAcao">Ação</th>
+                    <th class="Preço">R$</th>
+                    <th class="Status">Status</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
         </table>
     </div>
@@ -66,6 +58,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="form.js"></script>
 </body>
 
 </html>
