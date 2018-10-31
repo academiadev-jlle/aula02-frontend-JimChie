@@ -1,0 +1,23 @@
+.titulo {
+    padding-bottom: 2px;
+    background-color: gray;
+    text-align: center;
+    color: white;
+}
+
+.tableShip {
+    margin: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    align-content: center;
+}
+
+.tableShip table {
+    margin-inline-end: 60px;
+    margin-inline-start: 60px;
+}
+
+.tableShip table tbody {
+    font-size: 14px;
+}

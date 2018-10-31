@@ -18,7 +18,7 @@ function addAcao(evet) {
     infoAcao.textContent = acao.toUpperCase();
     infoPreco.textContent = parseFloat(preco).toFixed(2);
     infoStatus.textContent =  mensagemPreco(parseFloat(preco).toFixed(2));
-    // infoStatus.classList.add(parseInt(preco) > 50 ? 'statusSell' : 'statusBuy');
+    // infoStatus.classList.add(classPreco(parseFloat(preco));
 
     row.appendChild(infoAcao);
     row.appendChild(infoPreco);
@@ -37,5 +37,14 @@ function mensagemPreco(preco) {
     }
     else {
         return 'Manter em Carteira!';
+    }
+}
+
+function classPreco(preco) {
+    if (preco > 50) {
+        return 'statusSell';
+    }
+    else if (preco < 50) {
+        return 'statusBut';
     }
 }
