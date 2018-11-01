@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', onLoadDOM);
 
 function onLoadDOM() {
-    for (let pagenumber = 1; pagenumber <= 37; pagenumber++) {
-        searchSpaceShip(`https://swapi.co/api/starships/?page=${pagenumber}`);
-    }
+    searchSpaceShip('https://swapi.co/api/starships/');
 }
 
 function searchSpaceShip(url) {
@@ -15,16 +13,19 @@ function searchSpaceShip(url) {
             if (xmlHTTP.status === 200) {
                 const result = JSON.parse(this.responseText);
                 result.results.forEach(ship => addShip(ship));
+                if (result.next != null) {
+                    getUrl(result.next);
+                }
                 resolve("Success!");
             } else {
                 reject(Error("Error!"));
             }
         }
-        xmlHTTP.send();    
+        xmlHTTP.send();  
     });
-    promise.then(function(message) {
-        console.log(message)
-    });
+    // promise.then(function(message) {
+    //     console.log(message)
+    // });    
 }
 
 function addShip(spaceShip) {
@@ -45,4 +46,9 @@ function addShip(spaceShip) {
     row.appendChild(priceData);
 
     document.querySelector('.tableShip tbody').appendChild(row);
+}
+
+function getUrl(content) {
+    // console.log('To funfando');
+    searchSpaceShip(content);
 }
